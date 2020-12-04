@@ -1,0 +1,461 @@
+/* ---propert for all over the page--- */
+*{ 
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    /* scrolling left and right proprty is balanaced  */
+    overflow-x:hidden;
+} 
+/* centering the elements */
+.row{
+    max-width:1140px;
+    margin:0 auto;
+}
+/* ---Header---- */
+header{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.699)),url(./Omnifood/hero.jpg);
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.text-box{
+    position:absolute;
+    width:1140px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+/* headings */
+h1,h2,h3{ 
+    font-weight:300;
+    letter-spacing:1px;
+    text-transform:uppercase;   
+}
+h1{
+    font-size:45px;
+    text-transform:capitalize;
+    color:#fff;
+    word-spacing:4px;
+}
+
+h2{
+font-size:36px;
+word-spacing:2px;
+color:#000;
+text-align:center;
+margin-bottom:30px;
+}
+
+h3{
+font-size:22px;
+margin-bottom:15px;
+letter-spacing:0;
+}
+/* adding contents directly from css. In this case after h2 element so h2:after */
+h2:after{
+    display:block;
+    height:2px;
+    width:100px;
+    background-color:#e67e22;
+    content:" ";
+    /* aliging the small line to center */
+    margin: 0 auto;
+    margin-top:30px;
+}
+/* Paragraphs */
+.long-copy{
+    line-height: 30px;
+    width:70%;
+    margin-left:15%;
+    margin-right:15%;
+    font-size:20px;
+}
+.box{
+    padding:1%;
+}
+
+.box p {
+    font-size:18px;
+    line-height:25px;
+}
+/* ---Buttons----- */
+.btn:link, .btn:visited, input[type=submit]{
+    display:inline-block;
+    padding: 10px 30px;
+    font-weight:300;
+    border: 1px solid #fff ;
+    border-radius:250px;
+    color:#fff;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+/*----removing uderline from the links---- */
+a{
+    text-decoration:none;
+}
+.btn-full:link , .btn-full:visited,input[type=submit]{
+    border-color:#e67e22;
+    background-color:#e67e22;
+}
+
+.ghost-btn:link, .ghost-btn:visited{
+    border-color:#e67e22;
+    color:#e67e22;
+}
+
+.btn:hover, .btn:active,input[type=submit]:hover, input[type=submit]:active{
+    background-color:#cf6d17;
+}
+.btn-full:hover , .btn-full:active{
+   border-color:#cf6d17;
+}
+
+.ghost-btn:hover, .ghost-btn:active{
+    border-color:#cf6d17;
+    color:#fff;
+}
+/* logo */
+.logo{
+    height:100px;
+    width:auto;
+    float:left;
+    margin-top:20px;
+}
+/* Navigation */
+.main-nav{
+    float:right;
+    list-style:none;
+    margin-top:50px;
+   
+}
+.main-nav li{
+    display:inline-block;
+    margin:20px;
+    font-size:50px;
+}
+.main-nav li a:link, .main-nav li a:visited{
+    text-decoration:none;
+    text-transform:capitalize;
+    color:#fff;
+    font-size:18px;
+    border:1px solid transparent;
+    transition: border-bottom 0.2s;
+    padding:8px 0;
+}
+.main-nav li a:hover, .main-nav li a :active{
+border-bottom:2px solid #e67e22;
+}
+section{
+    padding:80px 0;
+}
+/* changing the margin of long copy class */
+.section-features .long-copy{
+    margin-bottom:30px;
+}
+/* meals */
+.section-meals{
+    padding:0;
+}
+.meals-showcase{
+    list-style:none;
+    width:100%;
+}
+
+.meals-showcase li{
+    display:block;
+    float:left;
+    width:25%;
+}
+.meals-photo{
+    width:100%;
+    margin:0;
+    overflow:hidden;
+    background-color:#000;
+}
+
+.meals-photo img{
+    opacity:0.7;
+    width:100%;
+    height:auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meals-photo img:hover{
+    opacity:1;
+    transform:scale(1.03 );
+}
+/* clearing floats that we have used. Its very important to clear otherwise some sections might overlapp . since we have used float property in meals images so we need to add clearfix class in them so that the section separation problem is solved.*/
+.clearfix{
+    zoom:1
+}
+
+.clearfix:after{
+content:".";
+clear:both;
+display:block;
+height:0;
+visibility:hidden;
+}
+
+/* How it Works */
+.section-steps{
+    background-color:#f4f4f4;
+}
+
+.steps-box:first-child{
+    padding-right:3%;
+    text-align:right;
+    margin-top:30px;
+}
+
+.steps-box:last-child{
+    padding-left:3%;
+    margin-top:100px;
+}
+
+.app-screen{
+    width:40%;
+}
+
+.works-step{
+    margin-bottom:50px;
+}
+/* selects the last element of the defined class */
+.works-step:last-of-type{
+    margin-bottom:120px;
+}
+
+.works-step div{
+    color:#e67e22;
+    border:2px solid #e67e22;
+    border-radius:50%;
+    height:55px;
+    width:55px;
+    display:inline-block;
+    text-align:center;
+    padding:5px;
+    float: left;
+    font-size:25px;
+    margin-right:25px;
+}
+
+.works{
+    font-size:25px;
+    margin-top:2px;
+    margin-bottom:0px;
+}
+
+.btn-app img{
+    height:50px;
+    width:auto;
+    margin-right:10px;
+}
+
+/* cities */
+.box img{
+    width:100%;
+    height:auto;
+    margin-bottom:15px;
+}
+
+.city-feature{
+    margin-bottom:5px;
+}
+
+.city-feature a:link,.city-feature a:visited{
+    color:#e67e22;
+    padding-bottom:1px;
+    border-bottom: 1px solid #e67e22;
+    transition: border-botttom 0.2s, color 0.2s;
+    
+}
+
+.city-feature a:hover,.city-feature a:active{
+    color:#555;
+    border-bottom: 1px solid transparent;
+}
+
+/* Customer section */
+.customer{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.699),rgba(0, 0, 0, 0.699)), url(./Omnifood/back-customers.jpg); 
+    background-size:cover;
+    color:#fff;
+    /* image will be fixed to that particular location. */
+    background-attachment: fixed;
+}
+.customer h2{
+    color:#fff;
+}
+blockquote{
+    margin-top:20px;
+    padding:2%;
+    font-style:italic;
+    line-height:30px;
+    position:relative;
+}
+blockquote:before{
+    content:"\201C";
+    font-size:600%;
+    display:block;
+    position:absolute;
+    /* whenever we fix the position of an element absolute , we have to fix it's parent position to relative */
+    top:-5px;
+    /* due to this property the quote will start 5px before the  text starts */
+    left:-5px;
+}
+cite{
+    font-size:18px;
+    margin-top:25px;
+    display:block;
+    /* since it is a block element , entire thing will be displaye on new line. */
+}
+cite img{
+    height:50px;
+    border-radius:50%;
+    margin-right:10px;
+    /* aligning the text and image in the middle  */
+    vertical-align:middle;
+}
+
+/* signup section */
+.signup{
+    background-color:#f4f4f4;
+}
+.plan-box{
+    background-color:#fff;
+    border-radius:10px;
+    /* centering the text 
+    1.first of all making the width of the section 90% of the span-1-of-3
+    2.then adding margin left or right 5% so that it makes up total 100%  
+    This is the best technique*/
+    width:90%;
+    margin-left:5%;
+    box-shadow: 0 2px 2px #ebebeb;
+    /* box-shadow: x-axis y-axis blur effect color */
+}
+.plan-box:first-child{
+    background-color:#fcfcfc;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+}
+
+.plan-box:last-child{
+    text-align:center;
+    border:0;
+}
+.plan-box div{
+    padding:15px;
+    border: 1px solid #e8e8e8;
+}
+.meal-price{
+    font-size:300%;
+    margin-bottom:10px;
+    font-weight:100;
+    color:#e67e22;
+}
+.meal-price span{
+    /* this tells how much percent of parent element  that is 50% of 300% in this case  */
+    font-size:50%;
+    font-weight:300;
+}
+
+.meal-day{
+    font-size:100%;
+}
+
+.plan-box ul{
+list-style:none;
+}
+.plan-box ul li{
+    padding:5px 0;
+}
+
+/* contact form */
+.contact-form{
+    width:60%;
+    margin: 0 auto;
+}
+/* new selectors select the parent element and the element which have the value specififed */
+input[type =text],input[type =email], select , textarea{
+    width:100%;
+    padding:8px;
+    border-radius:5px;
+    border: 1px solid #ccc;
+}
+
+textarea{
+    height:100px;
+}
+
+input[type="checkbox"]{
+    margin: 10px 5px 10px 0;
+}
+/* removes the borderline provided by the browser */
+*:focus{
+outline:none;
+}
+
+/* footer */
+
+footer li{
+    list-style:none;
+    display:inline-block;
+    margin-right:10px;
+}
+footer{
+    background-color:#333;
+    padding:30px;
+}
+
+.footer-nav{
+    float:left;
+    
+}
+
+.social-media{
+    float:right;
+}
+
+.footer-nav:last-child, .social-media:last-child{
+    margin-right:0px;
+}
+
+.footer-nav a:link, .footer-nav a:visited, .social-media a:link, .social-media:visited{
+    border:0;
+    text-decoration:none;
+    color:#888;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover , .footer-nav a:active{
+    color:#ddd;
+}
+
+footer p{
+    color:#888;
+    font-size:18px;
+    text-align:center;
+    margin-top:20px;
+}
+.social-media a:link,.social-media a:visited{
+    font-size:20px;
+}
+
+.social-media a{
+    color:#888;
+}
+.fb:hover{
+    color:#3b5998;
+}
+.tw:hover{
+    color:#00aced;
+}
+.g:hover{
+    color:#dd4b39;
+}
+.in:hover{
+    color:#517fa4;
+}
